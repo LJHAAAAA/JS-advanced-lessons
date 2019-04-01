@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 在引用过程中，先引用demo01.js的内容，之后引用demo02.js的内容，其中可能发生变量覆盖，就是demo02中的a变量的值覆盖掉 -->
+    <script src="js/demo01.js"></script>
+    <script src="js/demo02.js">
+        //此处引用js代码是无效的
+    </script>
+</body>
+
+</html>
