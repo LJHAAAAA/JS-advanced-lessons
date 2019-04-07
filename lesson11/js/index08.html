@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/demo08.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    //共享了外部的i
+    //设置延期1秒执行
+    /*for(var i=0;i<3;i++){
+        setTimeout(function(){
+            console.log(new Date(),i);
+        },i*1000);
+    }*/
+
+    //不共享i
+    for(var i=0;i<3;i++){
+        (function(j){
+            setTimeout(function(){
+                console.log(new Date(),j);
+            },j*1000);
+        })(i);
+    }
+</script>
+</html>
